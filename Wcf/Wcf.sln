@@ -7,6 +7,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{9C7FB0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makarim.Accounting", "Shared\Makarim.Accounting\Makarim.Accounting.csproj", "{A5F0C7C9-C328-40C1-A6DC-814D4ADC3CEF}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CustomUserName", "CustomUserName", "{999A0603-9993-4787-8F61-9FC1A761EEBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makarim.Accounting.CustomUNameConsoleHost", "CustomUserName\Makarim.Accounting.CustomUNameConsoleHost\Makarim.Accounting.CustomUNameConsoleHost.csproj", "{BC8A70F2-2203-470D-8980-42B491CED248}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makarim.Accounting.CustomUNameConsoleClient", "CustomUserName\Makarim.Accounting.CustomUNameConsoleClient\Makarim.Accounting.CustomUNameConsoleClient.csproj", "{7B056DF8-584C-44DB-A1C9-8DA0FA5D9208}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Makarim.WcfInfrastructures", "Shared\Makarim.WcfInfrastructures\Makarim.WcfInfrastructures.csproj", "{C39C211D-EC86-4740-A203-E594C255A261}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +25,26 @@ Global
 		{A5F0C7C9-C328-40C1-A6DC-814D4ADC3CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5F0C7C9-C328-40C1-A6DC-814D4ADC3CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5F0C7C9-C328-40C1-A6DC-814D4ADC3CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC8A70F2-2203-470D-8980-42B491CED248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC8A70F2-2203-470D-8980-42B491CED248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC8A70F2-2203-470D-8980-42B491CED248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC8A70F2-2203-470D-8980-42B491CED248}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B056DF8-584C-44DB-A1C9-8DA0FA5D9208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B056DF8-584C-44DB-A1C9-8DA0FA5D9208}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B056DF8-584C-44DB-A1C9-8DA0FA5D9208}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B056DF8-584C-44DB-A1C9-8DA0FA5D9208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C39C211D-EC86-4740-A203-E594C255A261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C39C211D-EC86-4740-A203-E594C255A261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C39C211D-EC86-4740-A203-E594C255A261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C39C211D-EC86-4740-A203-E594C255A261}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{A5F0C7C9-C328-40C1-A6DC-814D4ADC3CEF} = {9C7FB0D8-5173-40E3-989E-53D8DDCAA06B}
+		{BC8A70F2-2203-470D-8980-42B491CED248} = {999A0603-9993-4787-8F61-9FC1A761EEBE}
+		{7B056DF8-584C-44DB-A1C9-8DA0FA5D9208} = {999A0603-9993-4787-8F61-9FC1A761EEBE}
+		{C39C211D-EC86-4740-A203-E594C255A261} = {9C7FB0D8-5173-40E3-989E-53D8DDCAA06B}
 	EndGlobalSection
 EndGlobal
