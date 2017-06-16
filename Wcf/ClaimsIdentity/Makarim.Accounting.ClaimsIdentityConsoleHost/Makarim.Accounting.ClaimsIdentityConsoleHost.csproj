@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5F0C7C9-C328-40C1-A6DC-814D4ADC3CEF}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Makarim.Accounting</RootNamespace>
-    <AssemblyName>Makarim.Accounting</AssemblyName>
+    <ProjectGuid>{BACD3C9F-3D2A-4572-A825-334B52DF30F6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Makarim.Accounting.ClaimsIdentityConsoleHost</RootNamespace>
+    <AssemblyName>Makarim.Accounting.ClaimsIdentityConsoleHost</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -44,13 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\Data\AccountData.cs" />
-    <Compile Include="Contracts\Services\IAccountingServices.cs" />
-    <Compile Include="Contracts\Services\IAccountService.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AccountingServices.cs" />
-    <Compile Include="Services\ClaimsIdentityAccountingServices.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Makarim.Accounting\Makarim.Accounting.csproj">
+      <Project>{A5F0C7C9-C328-40C1-A6DC-814D4ADC3CEF}</Project>
+      <Name>Makarim.Accounting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Shared\Makarim.WcfInfrastructures\Makarim.WcfInfrastructures.csproj">
+      <Project>{c39c211d-ec86-4740-a203-e594c255a261}</Project>
+      <Name>Makarim.WcfInfrastructures</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,17 +1,17 @@
-﻿using Makarim.Accounting.Contracts.Services;
+﻿using Makarim.Accounting.Contracts.Data;
+using Makarim.Accounting.Contracts.Services;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Services;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Makarim.Accounting.Contracts.Data;
-using System.IdentityModel.Services;
 
 namespace Makarim.Accounting.Services
 {
-    public class AccountingServices : IAccountingServices
+    public class ClaimsIdentityAccountingServices : IAccountingServices
     {
-        public AccountingServices()
+        public ClaimsIdentityAccountingServices()
         {
         }
 
@@ -23,6 +23,7 @@ namespace Makarim.Accounting.Services
             new AccountData() { Number = "1012", Name = "Bank" }
         };
 
+        [ClaimsPrincipalPermission(System.Security.Permissions.SecurityAction.Demand, Operation = "GetAccounts", Resource = "Account")]
         public async Task<IEnumerable<AccountData>> GetAccountsAsync()
         {
             return await Task.Run<IEnumerable<AccountData>>(() =>

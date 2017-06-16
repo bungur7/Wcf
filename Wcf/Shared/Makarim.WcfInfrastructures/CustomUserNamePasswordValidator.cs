@@ -16,6 +16,9 @@ namespace Makarim.WcfInfrastructures
 
         public override void Validate(string userName, string password)
         {
+            // Somewhere in your application, you have user account storage.
+            // Validate user account here.
+            //
             if (userName.Equals(password) == true)
             {
                 throw new SecurityTokenValidationException();
